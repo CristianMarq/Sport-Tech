@@ -6,6 +6,12 @@ const userGet = (req = request, res = response) => {
     })
 };
 
+const userPost = (req = request, res = response) => {
+    const body = req.body;
+
+    res.json({msg: 'Todo bien ', body})
+}
 module.exports = {
-    userGet
+    userGet,
+    userPost
 }

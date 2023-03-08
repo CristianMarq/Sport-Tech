@@ -10,13 +10,15 @@ class Server {
         }
         this.port = process.env.PORT;
 
+        // middlewares
+        this.middlewares();
+
         // routers
         this.routers();
 
-        // middlewares
-        this.middlewares();
     }
 
+    
     routers(){
         this.app.use(this.paths.user, router);
     }
