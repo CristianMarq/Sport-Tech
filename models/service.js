@@ -1,10 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const {router} = require('../routers/users.js');
 
 class Server {
     constructor(){
         this.app = express();
-        this.paths = {}
+        this.paths = {
+            user: '/api/users'
+        }
         this.port = process.env.PORT;
 
         // routers
@@ -15,7 +18,7 @@ class Server {
     }
 
     routers(){
-
+        this.app.use(this.paths.user, router);
     }
 
     middlewares(){
