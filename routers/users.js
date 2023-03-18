@@ -7,6 +7,6 @@ router.get('',userGet);
 
 router.post('', userPost);
 
-router.put('/:id', userPut)
+router.put('/:id', userPut);
 
 module.exports = {router}
