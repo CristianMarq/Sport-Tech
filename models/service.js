@@ -8,7 +8,7 @@ class Server {
         this.paths = {
             user: '/api/users'
         }
-        this.port = process.env.PORT;
+        this.port = process.env.PORT || 8080;
 
         // middlewares
         this.middlewares();
